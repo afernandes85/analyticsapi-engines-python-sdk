@@ -25,14 +25,14 @@ jobs:
         python -m pip install --upgrade pip
         cd fds.analyticsapi.engines
         python setup.py sdist
-        pip install . -i http://artifactory.factset.com/artifactory/api/pypi/python/simple --trusted-host artifactory.factset.com
+        pip install .
 
     - name: Build Tests
       run: |
         cd tests 
         if [ -f requirements.txt ]
         then 
-          pip install -r requirements.txt -i http://artifactory.factset.com/artifactory/api/pypi/python/simple --trusted-host artifactory.factset.com 
+          pip install -r requirements.txt
         fi
     
     - name: Run Tests
