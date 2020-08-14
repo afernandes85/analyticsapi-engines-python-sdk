@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "4.0.0"
+__version__ = "4.0.1"
 
 # import apis into sdk package
 from fds.analyticsapi.engines.api.accounts_api import AccountsApi
