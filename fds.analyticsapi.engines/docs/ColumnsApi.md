@@ -102,9 +102,9 @@ configuration.password = 'YOUR_PASSWORD'
 configuration.host = "https://api.factset.com"
 # Create an instance of the API class
 api_instance = fds.analyticsapi.engines.ColumnsApi(fds.analyticsapi.engines.ApiClient(configuration))
-name = '' # str |  (optional) (default to '')
-category = '' # str |  (optional) (default to '')
-directory = '' # str |  (optional) (default to '')
+name = '' # str | Column name (optional) (default to '')
+category = '' # str | Column category (optional) (default to '')
+directory = '' # str | The directory to get the columns in (optional) (default to '')
 
 try:
     # Get PA columns
@@ -118,9 +118,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**|  | [optional] [default to &#39;&#39;]
- **category** | **str**|  | [optional] [default to &#39;&#39;]
- **directory** | **str**|  | [optional] [default to &#39;&#39;]
+ **name** | **str**| Column name | [optional] [default to &#39;&#39;]
+ **category** | **str**| Column category | [optional] [default to &#39;&#39;]
+ **directory** | **str**| The directory to get the columns in | [optional] [default to &#39;&#39;]
 
 ### Return type
 
