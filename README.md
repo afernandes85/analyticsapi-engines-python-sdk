@@ -68,7 +68,7 @@ export ANALYTICS_API_PASSWORD = "apikey"
 Run the tests with below command.
 
 ```sh
-??
+python -m test
 ```
 
 ## Contributing
