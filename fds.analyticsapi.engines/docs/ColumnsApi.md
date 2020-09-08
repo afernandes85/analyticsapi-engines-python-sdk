@@ -24,23 +24,35 @@ import time
 import fds.analyticsapi.engines
 from fds.analyticsapi.engines.rest import ApiException
 from pprint import pprint
-configuration = fds.analyticsapi.engines.Configuration()
+# Defining the host is optional and defaults to https://api.factset.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = fds.analyticsapi.engines.Configuration(
+    host = "https://api.factset.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = fds.analyticsapi.engines.Configuration(
+    username = 'YOUR_USERNAME',
+    password = 'YOUR_PASSWORD'
+)
 
-# Defining host is optional and default to https://api.factset.com
-configuration.host = "https://api.factset.com"
-# Create an instance of the API class
-api_instance = fds.analyticsapi.engines.ColumnsApi(fds.analyticsapi.engines.ApiClient(configuration))
-id = 'id_example' # str | Unique identifier for a column
+# Enter a context with an instance of the API client
+with fds.analyticsapi.engines.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = fds.analyticsapi.engines.ColumnsApi(api_client)
+    id = 'id_example' # str | Unique identifier for a column
 
-try:
-    # Get PA column settings
-    api_response = api_instance.get_pa_column_by_id(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ColumnsApi->get_pa_column_by_id: %s\n" % e)
+    try:
+        # Get PA column settings
+        api_response = api_instance.get_pa_column_by_id(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ColumnsApi->get_pa_column_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -93,34 +105,46 @@ import time
 import fds.analyticsapi.engines
 from fds.analyticsapi.engines.rest import ApiException
 from pprint import pprint
-configuration = fds.analyticsapi.engines.Configuration()
+# Defining the host is optional and defaults to https://api.factset.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = fds.analyticsapi.engines.Configuration(
+    host = "https://api.factset.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = fds.analyticsapi.engines.Configuration(
+    username = 'YOUR_USERNAME',
+    password = 'YOUR_PASSWORD'
+)
 
-# Defining host is optional and default to https://api.factset.com
-configuration.host = "https://api.factset.com"
-# Create an instance of the API class
-api_instance = fds.analyticsapi.engines.ColumnsApi(fds.analyticsapi.engines.ApiClient(configuration))
-name = '' # str |  (optional) (default to '')
-category = '' # str |  (optional) (default to '')
-directory = '' # str |  (optional) (default to '')
+# Enter a context with an instance of the API client
+with fds.analyticsapi.engines.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = fds.analyticsapi.engines.ColumnsApi(api_client)
+    name = '' # str | Column name (optional) (default to '')
+category = '' # str | Column category (optional) (default to '')
+directory = '' # str | The directory to get the columns in (optional) (default to '')
 
-try:
-    # Get PA columns
-    api_response = api_instance.get_pa_columns(name=name, category=category, directory=directory)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ColumnsApi->get_pa_columns: %s\n" % e)
+    try:
+        # Get PA columns
+        api_response = api_instance.get_pa_columns(name=name, category=category, directory=directory)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ColumnsApi->get_pa_columns: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**|  | [optional] [default to &#39;&#39;]
- **category** | **str**|  | [optional] [default to &#39;&#39;]
- **directory** | **str**|  | [optional] [default to &#39;&#39;]
+ **name** | **str**| Column name | [optional] [default to &#39;&#39;]
+ **category** | **str**| Column category | [optional] [default to &#39;&#39;]
+ **directory** | **str**| The directory to get the columns in | [optional] [default to &#39;&#39;]
 
 ### Return type
 

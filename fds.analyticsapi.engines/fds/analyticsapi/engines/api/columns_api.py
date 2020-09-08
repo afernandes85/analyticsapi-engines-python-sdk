@@ -3,7 +3,7 @@
 """
     Engines API
 
-    Allow clients to fetch Engines Analytics through APIs.  # noqa: E501
+    Allow clients to fetch Analytics through APIs.  # noqa: E501
 
     The version of the OpenAPI document: 2
     Contact: analytics.api.support@factset.com
@@ -19,7 +19,7 @@ import re  # noqa: F401
 import six
 
 from fds.analyticsapi.engines.api_client import ApiClient
-from fds.analyticsapi.engines.exceptions import (
+from fds.analyticsapi.engines.exceptions import (  # noqa: F401
     ApiTypeError,
     ApiValueError
 )
@@ -89,11 +89,17 @@ class ColumnsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'id'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -155,9 +161,9 @@ class ColumnsApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str name:
-        :param str category:
-        :param str directory:
+        :param str name: Column name
+        :param str category: Column category
+        :param str directory: The directory to get the columns in
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -182,9 +188,9 @@ class ColumnsApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str name:
-        :param str category:
-        :param str directory:
+        :param str name: Column name
+        :param str category: Column category
+        :param str directory: The directory to get the columns in
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -201,11 +207,19 @@ class ColumnsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['name', 'category', 'directory']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'name',
+            'category',
+            'directory'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:

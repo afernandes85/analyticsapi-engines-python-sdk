@@ -5,7 +5,7 @@
 """
     Engines API
 
-    Allow clients to fetch Engines Analytics through APIs.  # noqa: E501
+    Allow clients to fetch Analytics through APIs.  # noqa: E501
 
     The version of the OpenAPI document: 2
     Contact: analytics.api.support@factset.com
@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "4.0.0"
+__version__ = "4.1.0"
 
 # import apis into sdk package
 from fds.analyticsapi.engines.api.accounts_api import AccountsApi
@@ -43,6 +43,7 @@ from fds.analyticsapi.engines.exceptions import ApiTypeError
 from fds.analyticsapi.engines.exceptions import ApiValueError
 from fds.analyticsapi.engines.exceptions import ApiKeyError
 from fds.analyticsapi.engines.exceptions import ApiException
+from fds.analyticsapi.engines.stach_extensions import StachExtensions
 # import models into sdk package
 from fds.analyticsapi.engines.models.account_directories import AccountDirectories
 from fds.analyticsapi.engines.models.calculation import Calculation
