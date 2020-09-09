@@ -127,8 +127,8 @@ with fds.analyticsapi.engines.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fds.analyticsapi.engines.ColumnsApi(api_client)
     name = '' # str | Column name (optional) (default to '')
-category = '' # str | Column category (optional) (default to '')
-directory = '' # str | The directory to get the columns in (optional) (default to '')
+    category = '' # str | Column category (optional) (default to '')
+    directory = '' # str | The directory to get the columns in (optional) (default to '')
 
     try:
         # Get PA columns
