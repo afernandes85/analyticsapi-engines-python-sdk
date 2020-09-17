@@ -15,7 +15,7 @@ Use this library to integrate with FactSet's Analytics APIs. Below APIs are supp
 
 ## Contents
 
-* [fds.analyticsapi.engines](fds.analyticsapi.engines) - Auto-generated code using [Analytics API Engines SDK Generator](https://github.com/afernandes85/analyticsapi-engines-sdk-generator)
+* [auto-generated-sdk](auto-generated-sdk) - Auto-generated code using [Analytics API Engines SDK Generator](https://github.com/afernandes85/analyticsapi-engines-sdk-generator)
 * [examples](examples) - Sample project containing code snippets to quickly get started with the SDK  
 * [tests](tests) - Integration tests
 
@@ -35,7 +35,7 @@ Use this library to integrate with FactSet's Analytics APIs. Below APIs are supp
 
   ```sh
   git clone https://github.com/afernandes85/analyticsapi-engines-python-sdk.git
-  cd fds.analyticsapi.engines
+  cd auto-generated-sdk
   python setup.py install --user
   ```
 
@@ -73,5 +73,5 @@ python -m test
 
 ## Contributing
 
-* Files in [fds.analyticsapi.engines](fds.analyticsapi.engines) are auto-generated and should not be manually edited here. Refer [Analytics API Engines SDK Generator](https://github.com/afernandes85/analyticsapi-engines-sdk-generator) for instructions on how to modify these files.
-* [examples](examples) and [tests](tests) projects are open to enhancements and bug fixes. Please create a pull requests with the proposed changes.
+* Files in [auto-generated-sdk](auto-generated-sdk) directory are auto-generated and should not be manually edited here. Refer [Analytics API Engines SDK Generator](https://github.com/afernandes85/analyticsapi-engines-sdk-generator) for instructions on how to modify these files.
+* Projects [examples](examples) and [tests](tests) are open to enhancements and bug fixes. Please create a pull requests with the proposed changes.

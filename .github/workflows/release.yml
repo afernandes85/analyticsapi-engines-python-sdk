@@ -30,6 +30,6 @@ jobs:
         TWINE_USERNAME: ${{ env.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ env.PYPI_PASSWORD }}
       run: |
-        cd fds.analyticsapi.engines
+        cd auto-generated-sdk
         python setup.py sdist bdist_wheel
         twine upload dist/*
